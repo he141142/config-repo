@@ -1,3 +1,5 @@
 config:
   name: demo
   version: 1.0
+sykros-custom:
+  value: 1
