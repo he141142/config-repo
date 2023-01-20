@@ -1,4 +1,4 @@
 
 database-config:
   uri: host.docker
-  port: 9000:wq
+  port: 9000
