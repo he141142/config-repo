@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:9001/sykros_stores
+    url: jdbc:postgresql://localhost:9002/user-data
     username: sykros
     password: fqQ3nN4L
   jpa:
