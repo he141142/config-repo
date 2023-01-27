@@ -3,17 +3,17 @@ spring:
     url: jdbc:postgresql://localhost:9002/user-data
     username: sykros
     password: fqQ3nN4L
-  jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-    properties:
+    jpa:
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+      properties:
+        hibernate:
+          id:
+            new_generator_mappings: true
+          current_session_context_class: thread
+          show_sql: true
+          dialect: org.hibernate.dialect.PostgreSQLDialect
       hibernate:
-        id:
-          new_generator_mappings: true
-        current_session_context_class: thread
-        show_sql: true
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-    hibernate:
-      ddl-auto: update
-  servlet:
-    multipart:
-      enabled: true
+        ddl-auto: update
+      servlet:
+        multipart:
+          enabled: true

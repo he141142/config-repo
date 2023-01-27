@@ -1,0 +1,7 @@
+{
+  "realm": "oauth2-quizfer",
+  "public_key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqROs8rqelQo7ADn8tvUHPSVamwpwrTPDxz40R6EWyfvQGlqq1KSS+sDBBU01N2l43BcRwLKzKvVbZUklZLdlmLNtifqDSC4Q7Fq/IMlnu1lFseA++z1b3tWfrPdsgfN9FfXzuw4ob/f8s60mGsTUoZ5wPeUSB2pITJI3gOko4JO59KIV7WcFPI9FAiSXRk9AZKtSS4c/P20OaIr12aWVzN5SD2VvB71FP/7GGiXpslHU4O5lFjZmNCDnabLo70BH2U02QshBg+m4eXxzGyXWmQs8ZEPV+l1lQ22oSpOrdp2nFA7befI3eWc2LjzJX2vmClY8xtMnkI7ZbywJcF3cPQIDAQAB",
+  "token-service": "http://localhost:9028/auth/realms/oauth2-quizfer/protocol/openid-connect",
+  "account-service": "http://localhost:9028/auth/realms/oauth2-quizfer/account",
+  "tokens-not-before": 0
+}
