@@ -4,7 +4,7 @@ spring:
     include:
       - dev
   datasource:
-    url: jdbc:postgresql://localhost:9004/flashcard-service
+    url: jdbc:postgresql://localhost:9004/flashcard
     username: sykros
     password: fqQ3nN4L
   jpa:
