@@ -16,6 +16,9 @@ spring:
         current_session_context_class: thread
         show_sql: true
         dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          batch_size: 400
+        order_inserts: true
     hibernate:
       ddl-auto: update
   servlet:

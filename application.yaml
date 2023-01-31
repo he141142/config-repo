@@ -2,3 +2,7 @@
 database-config:
   uri: host.docker
   port: 9000
+
+eureka:
+  discovery-service:
+    default-zone: http://localhost:8762/eureka
