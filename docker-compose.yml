@@ -1,0 +1,54 @@
+version: '3.7'
+
+services:
+  discovery-service:
+    image: swp490-discovery-service:0.0.1-SNAPSHOT
+    mem_limit: 700m
+    ports:
+      - "8762:8762"
+    networks:
+      - currency-network
+  config-server:
+    image: config-server:0.0.1-SNAPSHOT
+    mem_limit: 700m
+    ports:
+      - "8334:8334"
+    networks:
+      - currency-network
+    depends_on:
+      - discovery-service
+    environment:
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://discovery-service:8762/eureka
+      SPRING.CLOUD.CONFIG.SERVER.GIT.URI: https://github.com/he141142/config-repo.git
+      SPRING.CLOUD.CONFIG.SERVER.DEFAULT-LABEL: main
+      SPRING.CLOUD.CONFIG.SERVER.FORCE-PULL: true
+  flashcard-service:
+    image: swp490-flash-card-service:0.0.1-SNAPSHOT
+    mem_limit: 700m
+    ports:
+      - "8096:8096"
+    networks:
+      - currency-network
+    depends_on:
+      - config-server
+    environment:
+      SPRING.CLOUD.CONFIG.URI: http://config-server:8334
+      SPRING.CONFIG.IMPORT: optional:configserver:http://config-server:8334
+
+  flashcarddb:
+    image: postgres@sha256:2c1fb5ffd530cd8d7935ff71959dc548f83763b7c29038d62706b15e58a44285
+    container_name: quizfer
+    restart: always
+    ports:
+      - '9004:5432'
+    environment:
+      POSTGRES_PASSWORD: fqQ3nN4L
+      POSTGRES_USER: sykros
+      POSTGRES_DB: flashcard
+    volumes:
+      - D:/swp490/database/flashcardservice:/var/lib/postgresql/data
+    networks:
+      - currency-network
+
+networks:
+  currency-network:
