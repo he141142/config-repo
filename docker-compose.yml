@@ -20,6 +20,7 @@ services:
     environment:
       EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://discovery-service:8762/eureka
       SPRING.CLOUD.CONFIG.SERVER.GIT.URI: https://github.com/he141142/config-repo.git
+      SPRING.CLOUD.CONFIG.SERVER.GIT.TIMEOUT: 10
       SPRING.CLOUD.CONFIG.SERVER.DEFAULT-LABEL: main
       SPRING.CLOUD.CONFIG.SERVER.FORCE-PULL: true
   flashcard-service:
