@@ -1,4 +1,10 @@
 spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://keycloak:8080/auth/realms/oauth2-quizfer
+          jwk-set-uri: http://keycloak:8080/auth/realms/oauth2-quizfer/protocol/openid-connect/certs
   datasource:
     url: jdbc:postgresql://userdb:5432/user-data
     username: sykros
