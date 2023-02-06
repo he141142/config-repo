@@ -23,3 +23,6 @@ spring:
     servlet:
       multipart:
         enabled: true
+keycloak-admin:
+  username: admindeptrai
+  password: admin123
