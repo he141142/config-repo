@@ -95,10 +95,10 @@ services:
       - config-server
       - discovery-service
     environment:
-      SPRING.CLOUD.CONFIG.URI: http://config-server:8334
-      SPRING.CONFIG.IMPORT: optional:configserver:http://config-server:8334
+#      SPRING.CLOUD.CONFIG.URI: http://config-server:8334
+#      SPRING.CONFIG.IMPORT: optional:configserver:http://config-server:8334
       EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://discovery-service:8762/eureka
-      SPRING.CLOUD.CONFIG.LABEL: prod
+#      SPRING.CLOUD.CONFIG.LABEL: prod
 
   auth-service:
     image: auth-service:0.0.1-SNAPSHOT
@@ -110,10 +110,10 @@ services:
     networks:
       - currency-network
     environment:
-#      SPRING.CLOUD.CONFIG.URI: http://config-server:8334
-#      SPRING.CONFIG.IMPORT: optional:configserver:http://config-server:8334
+      SPRING.CLOUD.CONFIG.URI: http://config-server:8334
+      SPRING.CONFIG.IMPORT: optional:configserver:http://config-server:8334
       EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://discovery-service:8762/eureka
-#      SPRING.CLOUD.CONFIG.LABEL: prod
+      SPRING.CLOUD.CONFIG.LABEL: prod
 
   dbpostgres:
     image: postgres@sha256:2c1fb5ffd530cd8d7935ff71959dc548f83763b7c29038d62706b15e58a44285
