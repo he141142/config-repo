@@ -83,6 +83,7 @@ services:
       EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://discovery-service:8762/eureka
       SPRING.CLOUD.CONFIG.LABEL: prod
 
+
   gateway:
     image: api-gateway:0.0.1-SNAPSHOT
     mem_limit: 700m
@@ -93,6 +94,11 @@ services:
     depends_on:
       - config-server
       - discovery-service
+    environment:
+      SPRING.CLOUD.CONFIG.URI: http://config-server:8334
+      SPRING.CONFIG.IMPORT: optional:configserver:http://config-server:8334
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://discovery-service:8762/eureka
+      SPRING.CLOUD.CONFIG.LABEL: prod
 
   auth-service:
     image: auth-service:0.0.1-SNAPSHOT
@@ -104,10 +110,47 @@ services:
     networks:
       - currency-network
     environment:
-      SPRING.CLOUD.CONFIG.URI: http://config-server:8334
-      SPRING.CONFIG.IMPORT: optional:configserver:http://config-server:8334
+#      SPRING.CLOUD.CONFIG.URI: http://config-server:8334
+#      SPRING.CONFIG.IMPORT: optional:configserver:http://config-server:8334
       EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://discovery-service:8762/eureka
-      SPRING.CLOUD.CONFIG.LABEL: prod
+#      SPRING.CLOUD.CONFIG.LABEL: prod
+
+  dbpostgres:
+    image: postgres@sha256:2c1fb5ffd530cd8d7935ff71959dc548f83763b7c29038d62706b15e58a44285
+    container_name: quizferdb
+    restart: always
+    ports:
+      - '9002:5432'
+    environment:
+      POSTGRES_PASSWORD: fqQ3nN4L
+      POSTGRES_USER: sykros
+      POSTGRES_MULTIBLE_DATABASES: quizfer
+    volumes:
+      - D:/swp490/quizfer/backup:/var/lib/postgresql/data
+    networks:
+      - currency-network
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:10.0.1
+    mem_limit: 1000m
+    environment:
+      PROXY_ADDRESS_FORWARDING: "true"
+      DB_VENDOR: postgres
+      DB_ADDR: quizferdb
+      DB_DATABASE: keycloak
+      DB_USER: sykros
+      DB_SCHEMA: public
+      DB_PASSWORD: fqQ3nN4L
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin
+      JDBC_PARAMS: useSSL=false&allowPublicKeyRetrieval=true
+
+    ports:
+      - 9028:8080
+    depends_on:
+      - dbpostgres
+    networks:
+      - currency-network
 
 networks:
   currency-network:
