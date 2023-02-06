@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://userservice:5432/user-data
+    url: jdbc:postgresql://userdb:5432/user-data
     username: sykros
     password: fqQ3nN4L
   jpa:

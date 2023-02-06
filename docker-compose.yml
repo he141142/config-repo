@@ -79,7 +79,7 @@ services:
       SPRING.CLOUD.CONFIG.URI: http://config-server:8334
       SPRING.CONFIG.IMPORT: optional:configserver:http://config-server:8334
       EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://discovery-service:8762/eureka
-      SPRING.CLOUD.CONFIG.PROFILE: prod
+      SPRING.CLOUD.CONFIG.LABEL: prod
 
 
 networks:
