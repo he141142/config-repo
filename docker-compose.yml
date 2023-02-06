@@ -32,6 +32,7 @@ services:
       - currency-network
     depends_on:
       - config-server
+      - flashcarddb
     environment:
       SPRING.CLOUD.CONFIG.URI: http://config-server:8334
       SPRING.CONFIG.IMPORT: optional:configserver:http://config-server:8334
@@ -75,15 +76,28 @@ services:
     depends_on:
       - config-server
       - discovery-service
+      - userdb
     environment:
       SPRING.CLOUD.CONFIG.URI: http://config-server:8334
       SPRING.CONFIG.IMPORT: optional:configserver:http://config-server:8334
       EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://discovery-service:8762/eureka
       SPRING.CLOUD.CONFIG.LABEL: prod
 
+  gateway:
+    image: api-gateway:0.0.1-SNAPSHOT
+    mem_limit: 700m
+    ports:
+      - "8777:8777"
+    networks:
+      - currency-network
+    depends_on:
+      - config-server
+      - discovery-service
+
+  auth-service:
+    image:
+    depends_on:
+      - keycloak
 
 networks:
   currency-network:
-#volumes:
-#  D:/swp490/database/userservice:
-#  D:/swp490/database/flashcardservice:

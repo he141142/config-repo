@@ -1,0 +1,62 @@
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          oauth2-client-credentials:
+            client-id: oauth-client
+            client-secret: 469c7a8f-94b8-4376-ba48-3b38f5786f6b
+            scope: openid, profile, roles
+            authorization-grant-type: password
+            provider: keycloak
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8180/auth/realms/auth-realm
+            token-uri: http://localhost:8180/auth/realms/auth-realm/protocol/openid-connect/token
+
+eureka:
+  instance:
+    appname: auth-service
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8762/eureka
+
+keycloak:
+  realm: oauth2-quizfer
+  resource: oauth-client
+  auth-server-url: http://keycloak:8080/auth
+  ssl-required: none
+  public-client: true
+  use-resource-role-mappings: true
+  bearer-only: true
+  cors: true
+  principal-attribute: preferred_username
+
+keycloak-config:
+  keycloak-auth-url: ${keycloak.auth-server-url}
+  realm-name: ${keycloak.realm}
+  admin-user: admin
+  admin-password: admin
+  grant-type: password
+  clients:
+    oauth2-client:
+      id: fa046b4f-92e5-4e9e-b2bd-d00419f7b051
+
+feign:
+  circuitbreaker:
+    enabled: true
+    alphanumeric-ids:
+      enabled: true
+resilience4j:
+  circuitbreaker:
+    instances:
+      DemoClientgetDemo:
+        minimumNumberOfCalls: 69
+  timelimiter:
+    instances:
+      DemoClientgetDemo:
+        timeoutDuration: 10s
