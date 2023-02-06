@@ -3,8 +3,8 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:9028/auth/realms/oauth2-quizfer
-          jwk-set-uri: http://localhost:9028/auth/realms/oauth2-quizfer/protocol/openid-connect/certs
+          issuer-uri: http://keycloak:8080/auth/realms/oauth2-quizfer
+          jwk-set-uri: http://keycloak:8080/auth/realms/oauth2-quizfer/protocol/openid-connect/certs
   profiles:
     include:
       - dev
