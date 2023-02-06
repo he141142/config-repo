@@ -23,7 +23,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
-      defaultZone: http://localhost:8762/eureka
+      defaultZone: http://discovery-service:8762/eureka
 
 keycloak:
   realm: oauth2-quizfer
