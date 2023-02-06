@@ -87,7 +87,7 @@ services:
     image: api-gateway:0.0.1-SNAPSHOT
     mem_limit: 700m
     ports:
-      - "8777:8777"
+      - "9733:9733"
     networks:
       - currency-network
     depends_on:
@@ -95,9 +95,19 @@ services:
       - discovery-service
 
   auth-service:
-    image:
+    image: auth-service:0.0.1-SNAPSHOT
     depends_on:
       - keycloak
+      - config-server
+    ports:
+      - "8778:8778"
+    networks:
+      - currency-network
+    environment:
+      SPRING.CLOUD.CONFIG.URI: http://config-server:8334
+      SPRING.CONFIG.IMPORT: optional:configserver:http://config-server:8334
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://discovery-service:8762/eureka
+      SPRING.CLOUD.CONFIG.LABEL: prod
 
 networks:
   currency-network:
