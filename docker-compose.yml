@@ -40,7 +40,8 @@ services:
       EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://discovery-service:8762/eureka
       SPRING.SECURITY.OAUTH2.RESOURCESERVER.JWT.ISUER-URI: http://keycloak:8080/auth/realms/oauth2-quizfer
       SPRING.SECURITY.OAUTH2.RESOURCESERVER.JWT.JWT-SET-URI: http://keycloak:8080/auth/realms/oauth2-quizfer/protocol/openid-connect/certs
-
+      SPRING.CLOUD.CONFIG.LABEL: prod
+      SPRING.CLOUD.CONFIG.FAILFAST: false
   flashcarddb:
     image: postgres@sha256:2c1fb5ffd530cd8d7935ff71959dc548f83763b7c29038d62706b15e58a44285
     restart: always
