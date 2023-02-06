@@ -35,7 +35,7 @@ services:
     environment:
       SPRING.CLOUD.CONFIG.URI: http://config-server:8334
       SPRING.CONFIG.IMPORT: optional:configserver:http://config-server:8334
-
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://discovery-service:8762/eureka
   flashcarddb:
     image: postgres@sha256:2c1fb5ffd530cd8d7935ff71959dc548f83763b7c29038d62706b15e58a44285
     restart: always
@@ -49,6 +49,19 @@ services:
       - D:/swp490/database/flashcardservice:/var/lib/postgresql/data
     networks:
       - currency-network
+    userdb:
+      image: postgres@sha256:2c1fb5ffd530cd8d7935ff71959dc548f83763b7c29038d62706b15e58a44285
+      restart: always
+      ports:
+        - '9004:5432'
+      environment:
+        POSTGRES_PASSWORD: fqQ3nN4L
+        POSTGRES_USER: sykros
+        POSTGRES_DB: user-data
+      volumes:
+        - D:/swp490/database/userservice:/var/lib/postgresql/data
+      networks:
+        - currency-network
 
 networks:
   currency-network:
