@@ -23,6 +23,7 @@ services:
       SPRING.CLOUD.CONFIG.SERVER.GIT.TIMEOUT: 10
       SPRING.CLOUD.CONFIG.SERVER.DEFAULT-LABEL: main
       SPRING.CLOUD.CONFIG.SERVER.FORCE-PULL: true
+
   flashcard-service:
     image: swp490-flash-card-service:0.0.1-SNAPSHOT
     mem_limit: 700m
@@ -37,6 +38,8 @@ services:
       SPRING.CLOUD.CONFIG.URI: http://config-server:8334
       SPRING.CONFIG.IMPORT: optional:configserver:http://config-server:8334
       EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://discovery-service:8762/eureka
+      SPRING.SECURITY.OAUTH2.RESOURCESERVER.JWT.ISUER-URI: http://keycloak:8080/auth/realms/oauth2-quizfer
+      SPRING.SECURITY.OAUTH2.RESOURCESERVER.JWT.JWT-SET-URI: http://keycloak:8080/auth/realms/oauth2-quizfer/protocol/openid-connect/certs
 
   flashcarddb:
     image: postgres@sha256:2c1fb5ffd530cd8d7935ff71959dc548f83763b7c29038d62706b15e58a44285
@@ -82,7 +85,8 @@ services:
       SPRING.CONFIG.IMPORT: optional:configserver:http://config-server:8334
       EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://discovery-service:8762/eureka
       SPRING.CLOUD.CONFIG.LABEL: prod
-
+      SPRING.SECURITY.OAUTH2.RESOURCESERVER.JWT.ISUER-URI: http://keycloak:8080/auth/realms/oauth2-quizfer
+      SPRING.SECURITY.OAUTH2.RESOURCESERVER.JWT.JWT-SET-URI: http://keycloak:8080/auth/realms/oauth2-quizfer/protocol/openid-connect/certs
 
   gateway:
     image: api-gateway:0.0.1-SNAPSHOT
