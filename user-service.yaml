@@ -1,4 +1,10 @@
 spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9028/auth/realms/oauth2-quizfer
+          jwk-set-uri: http://localhost:9028/auth/realms/oauth2-quizfer/protocol/openid-connect/certs
   datasource:
     url: jdbc:postgresql://localhost:9002/user-data
     username: sykros
@@ -17,3 +23,7 @@ spring:
     servlet:
       multipart:
         enabled: true
+
+keycloak-admin:
+  username: admindeptrai
+  password: admin123

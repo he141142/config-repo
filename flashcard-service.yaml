@@ -1,5 +1,12 @@
 
 spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9028/auth/realms/oauth2-quizfer
+          jwk-set-uri: http://localhost:9028/auth/realms/oauth2-quizfer/protocol/openid-connect/certs
+
   profiles:
     include:
       - dev
@@ -25,7 +32,6 @@ spring:
     multipart:
       enabled: true
 
-
 eureka:
   instance:
     appname: flashcard-service
@@ -37,3 +43,22 @@ eureka:
     fetch-registry: true
     serviceUrl:
       defaultZone: http://localhost:8762/eureka
+
+feign:
+  circuitbreaker:
+    enabled: true
+    alphanumeric-ids:
+      enabled: true
+resilience4j:
+  circuitbreaker:
+    instances:
+      DemoClientgetDemo:
+        minimumNumberOfCalls: 69
+  timelimiter:
+    instances:
+      DemoClientgetDemo:
+        timeoutDuration: 10s
+
+keycloak-admin:
+  username: admindeptrai
+  password: admin123
