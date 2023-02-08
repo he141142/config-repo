@@ -1,0 +1,59 @@
+[
+  {
+    "describe": "login api",
+    "api": "http://127.0.0.1:9733/auth-service/api/v1/auth/login",
+    "method": "POST",
+    "request": {
+      "body": {
+        "username": "long642w5",
+        "password": "123456"
+      }
+    },
+    "response": {
+      "body": {
+        "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJZQlVScEtvZnhDX3dfRFprYnBHVm9JWHhJTTJmOFQ2Y0VzUTRXMTlFbmNnIn0.eyJleHAiOjE2NzU5MDEzMjMsImlhdCI6MTY3NTg2NTMyMywianRpIjoiMDIyNjE4ODctNDUxMy00ODZlLTgxNDItODM1MTUxNDFmYTg3IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDI4L2F1dGgvcmVhbG1zL29hdXRoMi1xdWl6ZmVyIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjcxNzk2YTk0LThhOWMtNGZlZS1hYTJkLWY5MDcwNWMxMzdmYSIsInR5cCI6IkJlYXJlciIsImF6cCI6Im9hdXRoLWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiJhOWU4YzVjMi05Y2IzLTQwNGUtYWMwNi1lYzhkMTg3ZWU4NDMiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJvYXV0aC1jbGllbnQiOnsicm9sZXMiOlsiVGVhY2hlciJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiRG8gTG9uZyIsInByZWZlcnJlZF91c2VybmFtZSI6Imxvbmc2NDJ3NSIsImdpdmVuX25hbWUiOiJEbyIsImZhbWlseV9uYW1lIjoiTG9uZyIsImVtYWlsIjoibG9uZzYyNDV3QGdtYWlsLmNvbSJ9.XRbD-qjwZ4ChRDjqVJDPGRR4QYcRBDM0y4Oeqr10CV1kFonJB0Pl33vWqRn7mtEhum9HeP6E7q8BBh6hGWGl-4Ngps_9lhfvEO5QN3IS9CKeB0GAVmaWGQp-WCuhcaNZbSF3RcP81f0lNrMLnJjRQCi4jk45oYlDJcJEJO-opsucYhkPUjeKiPfp11kKN8hpmUKdqCeRsEUD6qxtiDQdyrVg_Yvan4lZ8yvhgYfTPOfc86IY_1tDvJ161VM_PbrhKgQOIrYzRia4-Q-udRgqC0_DrSAaCWFqvaNLgoa2FetDcHRYni1VqqegtriiTz-k66bfocB4rL3Jz3wbndWnJw",
+        "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI3NTdhMWRiNS0zMzQ1LTQyMDItOGQ0Ni01YzQ2MGFmMzliYmIifQ.eyJleHAiOjE2NzU4NjcxMjMsImlhdCI6MTY3NTg2NTMyMywianRpIjoiZjVhMTEwMmUtMzQxYy00NTQxLTk5ZjUtYThlODBlYjNiNDZmIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDI4L2F1dGgvcmVhbG1zL29hdXRoMi1xdWl6ZmVyIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo5MDI4L2F1dGgvcmVhbG1zL29hdXRoMi1xdWl6ZmVyIiwic3ViIjoiNzE3OTZhOTQtOGE5Yy00ZmVlLWFhMmQtZjkwNzA1YzEzN2ZhIiwidHlwIjoiUmVmcmVzaCIsImF6cCI6Im9hdXRoLWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiJhOWU4YzVjMi05Y2IzLTQwNGUtYWMwNi1lYzhkMTg3ZWU4NDMiLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUifQ._2audpEN61ELo_crjsJFuBwZApCpdboKFVgEHRtIOwM",
+        "expires_in": "36000",
+        "refresh_expires_in": "1800",
+        "token_type": "bearer"
+      }
+    }
+  },
+  {
+    "describe": "register api",
+    "api": "http://127.0.0.1:9733/auth-service/api/v1/auth/register",
+    "method": "POST",
+    "request": {
+      "body":{
+        "first_name": "Do",
+        "last_name": "Long",
+        "email": "long6245w@gmail.com",
+        "user_name": "long642w5",
+        "password": "123456",
+        "user_type": "Teacher",
+        "school_name": "fpt",
+        "date_of_birth": "2000-12-12"
+      }
+    },
+    "response": {
+      "body":{
+        "first_name": "Do",
+        "last_name": "Long",
+        "email": "long6245w@gmail.com",
+        "role": "Teacher",
+        "user_name": "long642w5",
+        "password": "$2a$10$qjuoe707AuyK0Zo7YZ6/0OSWUaWbHKKnSdYRIEA7VdqUYXUqop7wm",
+        "status": "ACTIVATED",
+        "user_id": "71796a94-8a9c-4fee-aa2d-f90705c137fa",
+        "login_data": {
+          "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJZQlVScEtvZnhDX3dfRFprYnBHVm9JWHhJTTJmOFQ2Y0VzUTRXMTlFbmNnIn0.eyJleHAiOjE2NzU5MDEyNDQsImlhdCI6MTY3NTg2NTI0NCwianRpIjoiN2RiMjA4ZmItNzg4OS00NWUwLTk1NjEtNWJkMjRkMmNjYzRjIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDI4L2F1dGgvcmVhbG1zL29hdXRoMi1xdWl6ZmVyIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjcxNzk2YTk0LThhOWMtNGZlZS1hYTJkLWY5MDcwNWMxMzdmYSIsInR5cCI6IkJlYXJlciIsImF6cCI6Im9hdXRoLWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiJjMzg1ZmY3MS1hMTJhLTQzM2YtOTRmNC1kMTJkY2ZjOGIzM2MiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJvYXV0aC1jbGllbnQiOnsicm9sZXMiOlsiVGVhY2hlciJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiRG8gTG9uZyIsInByZWZlcnJlZF91c2VybmFtZSI6Imxvbmc2NDJ3NSIsImdpdmVuX25hbWUiOiJEbyIsImZhbWlseV9uYW1lIjoiTG9uZyIsImVtYWlsIjoibG9uZzYyNDV3QGdtYWlsLmNvbSJ9.AaYjuzgVIiXnUmd3Cj6oeoaQPFpn_gEVljz_oy28b-OeFEYQgcL_O2cMlpDZYIJhelxpRo6mWSENEN4ZfVrlJGTZ00H5Vvi5fXhDqkN1h6FmEAQIsQsjeglj44EkLJHeDiW1bswwUtejPYoclVZg8Q662ATnZ1NHI8HaAuN3raT2g-8WO0db1uAETDdSLNcX-5wvCksuEiJ0iB8Ap_A5WTDiQfYDb3evG8go2LbsVaMS8ILSG04txKAr3f6Lyy9pqEoWCQ6E3oiUOG8dxyhMqcpN36jwAYiWGHrmEvFoaiT5aQJ3jtyqdMT1aRC-9fEbpRdmJcohElMOMTvKaDRvgw",
+          "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI3NTdhMWRiNS0zMzQ1LTQyMDItOGQ0Ni01YzQ2MGFmMzliYmIifQ.eyJleHAiOjE2NzU4NjcwNDQsImlhdCI6MTY3NTg2NTI0NCwianRpIjoiODQ1MzM2MTMtNWIwYS00ODIzLTkwNmItZWE3M2UxM2FjZjllIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDI4L2F1dGgvcmVhbG1zL29hdXRoMi1xdWl6ZmVyIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo5MDI4L2F1dGgvcmVhbG1zL29hdXRoMi1xdWl6ZmVyIiwic3ViIjoiNzE3OTZhOTQtOGE5Yy00ZmVlLWFhMmQtZjkwNzA1YzEzN2ZhIiwidHlwIjoiUmVmcmVzaCIsImF6cCI6Im9hdXRoLWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiJjMzg1ZmY3MS1hMTJhLTQzM2YtOTRmNC1kMTJkY2ZjOGIzM2MiLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUifQ.Jc6KSoXCb3lrgO6n3UJrPqfb-6XhoQniqjmKf5TOCXo",
+          "expires_in": "36000",
+          "refresh_expires_in": "1800",
+          "token_type": "bearer"
+        },
+        "date_of_birth": "2000-12-12T00:00:00.000+00:00"
+      }
+    }
+  }
+]

@@ -1,0 +1,372 @@
+[
+  {
+    "describe": "create new flashcard set",
+    "api": "http://localhost:8096/api/v1/flashcard",
+    "method": "POST",
+    "request": {
+      "header":{
+        "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJZQlVScEtvZnhDX3dfRFprYnBHVm9JWHhJTTJmOFQ2Y0VzUTRXMTlFbmNnIn0.eyJleHAiOjE2NzU5MDEzMjMsImlhdCI6MTY3NTg2NTMyMywianRpIjoiMDIyNjE4ODctNDUxMy00ODZlLTgxNDItODM1MTUxNDFmYTg3IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDI4L2F1dGgvcmVhbG1zL29hdXRoMi1xdWl6ZmVyIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjcxNzk2YTk0LThhOWMtNGZlZS1hYTJkLWY5MDcwNWMxMzdmYSIsInR5cCI6IkJlYXJlciIsImF6cCI6Im9hdXRoLWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiJhOWU4YzVjMi05Y2IzLTQwNGUtYWMwNi1lYzhkMTg3ZWU4NDMiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJvYXV0aC1jbGllbnQiOnsicm9sZXMiOlsiVGVhY2hlciJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiRG8gTG9uZyIsInByZWZlcnJlZF91c2VybmFtZSI6Imxvbmc2NDJ3NSIsImdpdmVuX25hbWUiOiJEbyIsImZhbWlseV9uYW1lIjoiTG9uZyIsImVtYWlsIjoibG9uZzYyNDV3QGdtYWlsLmNvbSJ9.XRbD-qjwZ4ChRDjqVJDPGRR4QYcRBDM0y4Oeqr10CV1kFonJB0Pl33vWqRn7mtEhum9HeP6E7q8BBh6hGWGl-4Ngps_9lhfvEO5QN3IS9CKeB0GAVmaWGQp-WCuhcaNZbSF3RcP81f0lNrMLnJjRQCi4jk45oYlDJcJEJO-opsucYhkPUjeKiPfp11kKN8hpmUKdqCeRsEUD6qxtiDQdyrVg_Yvan4lZ8yvhgYfTPOfc86IY_1tDvJ161VM_PbrhKgQOIrYzRia4-Q-udRgqC0_DrSAaCWFqvaNLgoa2FetDcHRYni1VqqegtriiTz-k66bfocB4rL3Jz3wbndWnJw"
+      },
+      "body": {
+        "set_name": "Sample name",
+        "description": "----------------------------------------------------------------------",
+        "flashcards": [
+          {
+            "term": "why woman so difficutly to understand",
+            "definitions": [
+              "A",
+              "b",
+              "C",
+              "D"
+            ]
+          },
+          {
+            "term": "why woman so difficutly to understand",
+            "definitions": [
+              "A",
+              "b",
+              "C",
+              "D"
+            ]
+          },
+          {
+            "term": "why woman so difficutly to understand",
+            "definitions": [
+              "A",
+              "b",
+              "C",
+              "D"
+            ]
+          },
+          {
+            "term": "why woman so difficutly to understand",
+            "definitions": [
+              "A",
+              "b",
+              "C",
+              "D"
+            ]
+          },
+          {
+            "term": "why woman so difficutly to understand",
+            "definitions": [
+              "A",
+              "b",
+              "C",
+              "D"
+            ]
+          }
+        ],
+        "tag_name" : [
+          "A1", "A2", "A3"
+        ]
+      }
+    },
+    "response": {
+      "body": {
+        "id": 35,
+        "author_id": 42,
+        "encrypted": false,
+        "set_name": "Sample name",
+        "description": "----------------------------------------------------------------------",
+        "meta_data": {
+          "viewer": 0,
+          "rate": 0,
+          "flash_card_id": 35
+        },
+        "flashcards": [
+          {
+            "id": 151,
+            "folder_id": null,
+            "set_id": null,
+            "category_id": null,
+            "file_id": null,
+            "term": "why woman so difficutly to understand",
+            "No": 1,
+            "definitions": [
+              {
+                "id": 549,
+                "flashcard_id": 151,
+                "definition": "A",
+                "is_correct": true
+              },
+              {
+                "id": 550,
+                "flashcard_id": 151,
+                "definition": "b",
+                "is_correct": false
+              },
+              {
+                "id": 551,
+                "flashcard_id": 151,
+                "definition": "C",
+                "is_correct": false
+              },
+              {
+                "id": 552,
+                "flashcard_id": 151,
+                "definition": "D",
+                "is_correct": false
+              }
+            ]
+          },
+          {
+            "id": 152,
+            "folder_id": null,
+            "set_id": null,
+            "category_id": null,
+            "file_id": null,
+            "term": "why woman so difficutly to understand",
+            "No": 2,
+            "definitions": [
+              {
+                "id": 553,
+                "flashcard_id": 152,
+                "definition": "A",
+                "is_correct": true
+              },
+              {
+                "id": 554,
+                "flashcard_id": 152,
+                "definition": "b",
+                "is_correct": false
+              },
+              {
+                "id": 555,
+                "flashcard_id": 152,
+                "definition": "C",
+                "is_correct": false
+              },
+              {
+                "id": 556,
+                "flashcard_id": 152,
+                "definition": "D",
+                "is_correct": false
+              }
+            ]
+          },
+          {
+            "id": 153,
+            "folder_id": null,
+            "set_id": null,
+            "category_id": null,
+            "file_id": null,
+            "term": "why woman so difficutly to understand",
+            "No": 3,
+            "definitions": [
+              {
+                "id": 557,
+                "flashcard_id": 153,
+                "definition": "A",
+                "is_correct": true
+              },
+              {
+                "id": 558,
+                "flashcard_id": 153,
+                "definition": "b",
+                "is_correct": false
+              },
+              {
+                "id": 559,
+                "flashcard_id": 153,
+                "definition": "C",
+                "is_correct": false
+              },
+              {
+                "id": 560,
+                "flashcard_id": 153,
+                "definition": "D",
+                "is_correct": false
+              }
+            ]
+          },
+          {
+            "id": 154,
+            "folder_id": null,
+            "set_id": null,
+            "category_id": null,
+            "file_id": null,
+            "term": "why woman so difficutly to understand",
+            "No": 4,
+            "definitions": [
+              {
+                "id": 561,
+                "flashcard_id": 154,
+                "definition": "A",
+                "is_correct": true
+              },
+              {
+                "id": 562,
+                "flashcard_id": 154,
+                "definition": "b",
+                "is_correct": false
+              },
+              {
+                "id": 563,
+                "flashcard_id": 154,
+                "definition": "C",
+                "is_correct": false
+              },
+              {
+                "id": 564,
+                "flashcard_id": 154,
+                "definition": "D",
+                "is_correct": false
+              }
+            ]
+          },
+          {
+            "id": 155,
+            "folder_id": null,
+            "set_id": null,
+            "category_id": null,
+            "file_id": null,
+            "term": "why woman so difficutly to understand",
+            "No": 5,
+            "definitions": [
+              {
+                "id": 565,
+                "flashcard_id": 155,
+                "definition": "A",
+                "is_correct": true
+              },
+              {
+                "id": 566,
+                "flashcard_id": 155,
+                "definition": "b",
+                "is_correct": false
+              },
+              {
+                "id": 567,
+                "flashcard_id": 155,
+                "definition": "C",
+                "is_correct": false
+              },
+              {
+                "id": 568,
+                "flashcard_id": 155,
+                "definition": "D",
+                "is_correct": false
+              }
+            ]
+          }
+        ],
+        "tag_name": [
+          "A1",
+          "A2",
+          "A3"
+        ]
+      }
+    }
+  },
+
+  {
+    "describe": "add more flashcards to existing flashcard set",
+    "api": "http://localhost:8096/api/v1/flashcard/add",
+    "method": "POST",
+    "request": {
+      "header":{
+        "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJZQlVScEtvZnhDX3dfRFprYnBHVm9JWHhJTTJmOFQ2Y0VzUTRXMTlFbmNnIn0.eyJleHAiOjE2NzU5MDEzMjMsImlhdCI6MTY3NTg2NTMyMywianRpIjoiMDIyNjE4ODctNDUxMy00ODZlLTgxNDItODM1MTUxNDFmYTg3IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDI4L2F1dGgvcmVhbG1zL29hdXRoMi1xdWl6ZmVyIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjcxNzk2YTk0LThhOWMtNGZlZS1hYTJkLWY5MDcwNWMxMzdmYSIsInR5cCI6IkJlYXJlciIsImF6cCI6Im9hdXRoLWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiJhOWU4YzVjMi05Y2IzLTQwNGUtYWMwNi1lYzhkMTg3ZWU4NDMiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJvYXV0aC1jbGllbnQiOnsicm9sZXMiOlsiVGVhY2hlciJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiRG8gTG9uZyIsInByZWZlcnJlZF91c2VybmFtZSI6Imxvbmc2NDJ3NSIsImdpdmVuX25hbWUiOiJEbyIsImZhbWlseV9uYW1lIjoiTG9uZyIsImVtYWlsIjoibG9uZzYyNDV3QGdtYWlsLmNvbSJ9.XRbD-qjwZ4ChRDjqVJDPGRR4QYcRBDM0y4Oeqr10CV1kFonJB0Pl33vWqRn7mtEhum9HeP6E7q8BBh6hGWGl-4Ngps_9lhfvEO5QN3IS9CKeB0GAVmaWGQp-WCuhcaNZbSF3RcP81f0lNrMLnJjRQCi4jk45oYlDJcJEJO-opsucYhkPUjeKiPfp11kKN8hpmUKdqCeRsEUD6qxtiDQdyrVg_Yvan4lZ8yvhgYfTPOfc86IY_1tDvJ161VM_PbrhKgQOIrYzRia4-Q-udRgqC0_DrSAaCWFqvaNLgoa2FetDcHRYni1VqqegtriiTz-k66bfocB4rL3Jz3wbndWnJw"
+      },
+      "body": {
+        "flashcard_set_id": 12,
+        "flashcards": [
+          {
+            "term": "why woman so difficutly to understand",
+            "definitions": [
+              "A",
+              "b",
+              "C",
+              "D"
+            ]
+          },
+          {
+            "term": "why woman so difficutly to understand",
+            "definitions": [
+              "A",
+              "b",
+              "C",
+              "D"
+            ]
+          }
+        ]
+      }
+    },
+    "response": {
+      "body": {
+        "id": 35,
+        "author_id": 42,
+        "set_name": null,
+        "tag_name": [
+          "A1",
+          "A2",
+          "A3"
+        ],
+        "flash_cards": [
+          {
+            "term": "why woman so difficutly to understand",
+            "id": 156,
+            "No": 6,
+            "definitions": [
+              {
+                "id": 569,
+                "flashcard_id": 156,
+                "definition": "A",
+                "is_correct": false
+              },
+              {
+                "id": 570,
+                "flashcard_id": 156,
+                "definition": "b",
+                "is_correct": false
+              },
+              {
+                "id": 571,
+                "flashcard_id": 156,
+                "definition": "C",
+                "is_correct": false
+              },
+              {
+                "id": 572,
+                "flashcard_id": 156,
+                "definition": "D",
+                "is_correct": false
+              }
+            ]
+          },
+          {
+            "term": "why woman so difficutly to understand",
+            "id": 157,
+            "No": 7,
+            "definitions": [
+              {
+                "id": 573,
+                "flashcard_id": 157,
+                "definition": "A",
+                "is_correct": false
+              },
+              {
+                "id": 574,
+                "flashcard_id": 157,
+                "definition": "b",
+                "is_correct": false
+              },
+              {
+                "id": 575,
+                "flashcard_id": 157,
+                "definition": "C",
+                "is_correct": false
+              },
+              {
+                "id": 576,
+                "flashcard_id": 157,
+                "definition": "D",
+                "is_correct": false
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+]
