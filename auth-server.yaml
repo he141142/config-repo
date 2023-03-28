@@ -36,12 +36,14 @@ keycloak:
   cors: true
   principal-attribute: preferred_username
 
+
 keycloak-config:
   keycloak-auth-url: ${keycloak.auth-server-url}
   realm-name: ${keycloak.realm}
   admin-user: admin
   admin-password: admin
   grant-type: password
+  client-secret: 469c7a8f-94b8-4376-ba48-3b38f5786f6b
   clients:
     oauth2-client:
       id: fa046b4f-92e5-4e9e-b2bd-d00419f7b051
